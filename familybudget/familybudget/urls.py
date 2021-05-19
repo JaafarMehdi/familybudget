@@ -20,6 +20,9 @@ from rest_framework import routers
 from . import views
 
 router = routers.DefaultRouter()
+router.register(r'categories', views.CategoryViewSet)
+router.register(r'entries', views.EntryViewSet) # todo split income and expense
+router.register(r'lists', views.ListViewSet)
 router.register(r'users', views.UserViewSet)
 
 urlpatterns = [
